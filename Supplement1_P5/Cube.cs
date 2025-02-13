@@ -44,6 +44,10 @@ public class Cube : Shape3D{
         return 6 * Math.Pow(sideLength, 2); // Surface Area = 6 * side^2
     }
 
+/// <summary>
+/// Returns a string representation of the cube, including its surface area and volume.
+/// </summary>
+/// <returns>A string containing the surface area and volume of the cube.</returns>
     public override string dump()
     {
         return $"Cube: Surface Area = {GetSurfaceArea()}, Volume = {GetVolume()}";
