@@ -26,4 +26,9 @@ public class Sphere : Shape3D{
     {
         return 4 * Math.PI * Math.Pow(radius, 2); // Surface Area = 4 * π * r^2
     }
+
+    public override string dump()
+    {
+        return $"Sphere: Surface Area = {GetSurfaceArea():0.##}, Volume = {GetVolume():0.##}";
+    }
 }
