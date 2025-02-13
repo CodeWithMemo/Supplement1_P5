@@ -34,7 +34,7 @@ public class CubeTest
     {
         var cube = new Cube(2);
         string expected = "Cube: Surface Area = 24, Volume = 8";
-        Assert.Equal(expected, cube.Dump());
+        Assert.Equal(expected, cube.dump());
     }
    
 }
