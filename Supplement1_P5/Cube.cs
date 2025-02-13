@@ -26,6 +26,10 @@ public class Cube : Shape3D{
         }
     }
 
+/// <summary>
+/// Calculates the volume of the cube.
+/// </summary>
+/// <returns>The volume of the cube.</returns>
     public override double GetVolume()
     {
         return Math.Pow(sideLength, 3); // Volume = side^3
