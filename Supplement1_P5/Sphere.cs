@@ -3,6 +3,11 @@ namespace Supplement1_P5;
 public class Sphere : Shape3D{
 
     private double radius;
+
+    /// <summary>
+    /// Initializes a new instance of the Sphereclass with the specified radius.
+    /// </summary>
+    /// <param name="radius">The radius of the sphere.</param>
     public Sphere(double radius)
     {
         Validate(radius);
