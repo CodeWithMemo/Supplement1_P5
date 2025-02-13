@@ -15,4 +15,13 @@ public class SphereTest
             Assert.Throws<ArgumentException>(() => new Sphere(0)); 
             Assert.Throws<ArgumentException>(() => new Sphere(-1)); 
         }
+
+    [Fact]
+        public void GetVolumeCorrectCalculation()
+        {
+            var sphere = new Sphere(3);
+
+            Assert.Equal((4.0 / 3.0) * Math.PI * Math.Pow(3, 3), sphere.GetVolume(), 2);
+        }
+
 }
