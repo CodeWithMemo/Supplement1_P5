@@ -7,5 +7,12 @@ public class CubeTest
         var exception = Record.Exception(() => new Cube(5));
         Assert.Null(exception);
     }
+
+    [Fact]
+    public void Constructor_InvalidSideLength_ThrowsArgumentException()
+    {
+        Assert.Throws<ArgumentException>(() => new Cube(0));
+        Assert.Throws<ArgumentException>(() => new Cube(-1));
+    }
    
 }
