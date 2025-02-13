@@ -15,5 +15,10 @@ public class Sphere : Shape3D{
         {
             throw new ArgumentException("Radius must be greater than 0.");
         }
-    }    
+    }   
+
+     public override double GetVolume()
+    {
+        return (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3); // Volume = 4/3 * π * r^3
+    } 
 }
