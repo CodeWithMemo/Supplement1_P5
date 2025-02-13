@@ -13,6 +13,11 @@ public class Cube : Shape3D{
         this.sideLength = sideLength;
     }
 
+/// <summary>
+/// Validates that the side length is greater than 0.
+/// </summary>
+/// <param name="sideLength">The length of one side of the cube.</param>
+/// <exception cref="ArgumentException">Thrown when the side length is less than or equal to 0.</exception>
      private void Validate(double sideLength)
     {
         if (sideLength <= 0)
