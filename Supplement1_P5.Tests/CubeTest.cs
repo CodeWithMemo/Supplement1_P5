@@ -21,5 +21,12 @@ public class CubeTest
         var cube = new Cube(3);
         Assert.Equal(27, cube.GetVolume());
     }
+
+    [Fact]
+    public void GetSurfaceArea_CorrectCalculation()
+    {
+        var cube = new Cube(4);
+        Assert.Equal(96, cube.GetSurfaceArea());
+    }
    
 }
