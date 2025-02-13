@@ -28,5 +28,13 @@ public class CubeTest
         var cube = new Cube(4);
         Assert.Equal(96, cube.GetSurfaceArea());
     }
+
+    [Fact]
+    public void Dump_ReturnsCorrectString()
+    {
+        var cube = new Cube(2);
+        string expected = "Cube: Surface Area = 24, Volume = 8";
+        Assert.Equal(expected, cube.Dump());
+    }
    
 }
