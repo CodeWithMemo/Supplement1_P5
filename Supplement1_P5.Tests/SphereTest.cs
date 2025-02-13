@@ -8,4 +8,11 @@ public class SphereTest
         var exception = Record.Exception(() => new Sphere(5));
         Assert.Null(exception); 
     }
+
+    [Fact]
+        public void Constructor_InvalidRadius_ThrowsArgumentException()
+        {
+            Assert.Throws<ArgumentException>(() => new Sphere(0)); 
+            Assert.Throws<ArgumentException>(() => new Sphere(-1)); 
+        }
 }
