@@ -21,4 +21,10 @@ public class Cube : Shape3D{
     {
         return Math.Pow(sideLength, 3); // Volume = side^3
     }
+
+    public override double GetSurfaceArea()
+    {
+        return 6 * Math.Pow(sideLength, 2); // Surface Area = 6 * side^2
+    }
+
 }
