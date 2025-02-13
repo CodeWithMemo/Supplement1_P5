@@ -16,4 +16,9 @@ public class Cube : Shape3D{
             throw new ArgumentException("Side length must be greater than 0.");
         }
     }
+
+    public override double GetVolume()
+    {
+        return Math.Pow(sideLength, 3); // Volume = side^3
+    }
 }
