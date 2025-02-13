@@ -24,4 +24,14 @@ public class SphereTest
             Assert.Equal((4.0 / 3.0) * Math.PI * Math.Pow(3, 3), sphere.GetVolume(), 2);
         }
 
+    [Fact]
+        public void GetSurfaceArea_CorrectCalculation()
+        {
+            // Arrange
+            var sphere = new Sphere(4);
+
+            // Assert
+            Assert.Equal(4 * Math.PI * Math.Pow(4, 2), sphere.GetSurfaceArea(), 2); // Surface Area calculation
+        }
+
 }
