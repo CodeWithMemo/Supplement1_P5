@@ -27,6 +27,10 @@ public class Sphere : Shape3D{
         }
     }   
 
+    /// <summary>
+    /// Calculates the volume of the sphere
+    /// </summary>
+    /// <returns>The volume of the sphere.</returns>
      public override double GetVolume()
     {
         return (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3); // Volume = 4/3 * π * r^3
