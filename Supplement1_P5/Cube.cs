@@ -8,4 +8,12 @@ public class Cube : Shape3D{
         Validate(sideLength);
         this.sideLength = sideLength;
     }
+
+     private void Validate(double sideLength)
+    {
+        if (sideLength <= 0)
+        {
+            throw new ArgumentException("Side length must be greater than 0.");
+        }
+    }
 }
