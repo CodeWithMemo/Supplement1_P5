@@ -14,5 +14,12 @@ public class CubeTest
         Assert.Throws<ArgumentException>(() => new Cube(0));
         Assert.Throws<ArgumentException>(() => new Cube(-1));
     }
+
+    [Fact]
+    public void GetVolumeCorrectCalculation()
+    {
+        var cube = new Cube(3);
+        Assert.Equal(27, cube.GetVolume());
+    }
    
 }
