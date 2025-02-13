@@ -34,4 +34,14 @@ public class SphereTest
             Assert.Equal(4 * Math.PI * Math.Pow(4, 2), sphere.GetSurfaceArea(), 2); // Surface Area calculation
         }
 
+        [Fact]
+        public void Dump_ReturnsCorrectString()
+        {
+            // Arrange
+            var sphere = new Sphere(2);
+            string expected = "Sphere: Surface Area = 50.27, Volume = 33.51";
+
+            // Act & Assert
+            Assert.Equal(expected, sphere.dump()); // Expected output for Dump
+        }
 }
