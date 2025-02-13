@@ -14,6 +14,11 @@ public class Sphere : Shape3D{
         this.radius = radius;
     }
 
+    /// <summary>
+    /// Validates the radius value to ensure it is greater than zero.
+    /// </summary>
+    /// <param name="radius">The radius value to validate.</param>
+    /// <exception cref="ArgumentException">Thrown when the radius is less than or equal to zero.</exception>
      private void Validate(double radius)
     {
         if (radius <= 0)
