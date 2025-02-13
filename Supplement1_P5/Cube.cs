@@ -35,6 +35,10 @@ public class Cube : Shape3D{
         return Math.Pow(sideLength, 3); // Volume = side^3
     }
 
+/// <summary>
+/// Calculates the surface area of the cube.
+/// </summary>
+/// <returns>The surface area of the cube.</returns>
     public override double GetSurfaceArea()
     {
         return 6 * Math.Pow(sideLength, 2); // Surface Area = 6 * side^2
