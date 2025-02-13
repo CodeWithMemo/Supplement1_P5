@@ -3,6 +3,10 @@ namespace Supplement1_P5;
 public class Cube : Shape3D{
     private double sideLength;
 
+/// <summary>
+/// Initializes a new instance of the Cube class with the specified side length.
+/// </summary>
+/// <param name="sideLength">The length of one side of the cube. Must be greater than 0.</param>
     public Cube(double sideLength)
     {
         Validate(sideLength);
