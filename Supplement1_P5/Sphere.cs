@@ -36,6 +36,10 @@ public class Sphere : Shape3D{
         return (4.0 / 3.0) * Math.PI * Math.Pow(radius, 3); // Volume = 4/3 * π * r^3
     } 
 
+    /// <summary>
+    /// Calculates the surface area of the sphere
+    /// </summary>
+    /// <returns>The surface area of the sphere.</returns>
     public override double GetSurfaceArea()
     {
         return 4 * Math.PI * Math.Pow(radius, 2); // Surface Area = 4 * π * r^2
