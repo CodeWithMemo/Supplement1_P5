@@ -19,4 +19,10 @@ public class Cylinder : Shape3D{
             throw new ArgumentException("Both radius and height must be greater than 0.");
         }
     }
+
+     public override double GetVolume()
+    {
+        return Math.PI * Math.Pow(radius, 2) * height; 
+    }
+
 }
