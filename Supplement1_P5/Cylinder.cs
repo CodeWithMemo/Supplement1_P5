@@ -5,6 +5,12 @@ public class Cylinder : Shape3D{
     private double radius;
     private double height;
 
+    /// <summary>
+    /// Initializes a new instance of the Cylinder class with the 
+    /// specified radius and height.
+    /// </summary>
+    /// <param name="radius">The radius of the cylinder.</param>
+    /// <param name="height">The height of the cylinder.</param>
     public Cylinder(double radius, double height)
     {
         Validate(radius, height);
