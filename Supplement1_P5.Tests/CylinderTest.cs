@@ -38,6 +38,6 @@ public class CylindeTest
             var cylinder = new Cylinder(2, 5);
             string expected = "Cylinder: Surface Area = 87.96, Volume = 62.83";
 
-            Assert.Equal(expected, cylinder.Dump()); 
+            Assert.Equal(expected, cylinder.dump()); 
         }
 }

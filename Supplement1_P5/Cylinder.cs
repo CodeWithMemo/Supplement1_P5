@@ -29,4 +29,9 @@ public class Cylinder : Shape3D{
     {
         return 2 * Math.PI * radius * (radius + height); 
     }
+
+    public override string dump()
+    {
+        return $"Cylinder: Surface Area = {GetSurfaceArea():0.##}, Volume = {GetVolume():0.##}";
+    }
 }
