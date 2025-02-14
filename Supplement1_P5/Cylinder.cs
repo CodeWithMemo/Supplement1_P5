@@ -32,6 +32,10 @@ public class Cylinder : Shape3D{
         }
     }
 
+    /// <summary>
+    /// Calculates the volume of the cylinder
+    /// </summary>
+    /// <returns>The volume of the cylinder.</returns>
      public override double GetVolume()
     {
         return Math.PI * Math.Pow(radius, 2) * height; 
