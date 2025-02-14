@@ -31,4 +31,13 @@ public class CylindeTest
             var cylinder = new Cylinder(4, 6);
             Assert.Equal(2 * Math.PI * 4 * (4 + 6), cylinder.GetSurfaceArea(), 2); 
         }
+
+    [Fact]
+        public void Dump_ReturnsCorrectString()
+        {
+            var cylinder = new Cylinder(2, 5);
+            string expected = "Cylinder: Surface Area = 87.96, Volume = 62.83";
+
+            Assert.Equal(expected, cylinder.Dump()); 
+        }
 }
