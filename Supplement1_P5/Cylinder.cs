@@ -25,4 +25,8 @@ public class Cylinder : Shape3D{
         return Math.PI * Math.Pow(radius, 2) * height; 
     }
 
+    public override double GetSurfaceArea()
+    {
+        return 2 * Math.PI * radius * (radius + height); 
+    }
 }
