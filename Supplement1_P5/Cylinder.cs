@@ -11,4 +11,12 @@ public class Cylinder : Shape3D{
         this.radius = radius;
         this.height = height;
     }
+
+     private void Validate(double radius, double height)
+    {
+        if (radius <= 0 || height <= 0)
+        {
+            throw new ArgumentException("Both radius and height must be greater than 0.");
+        }
+    }
 }
