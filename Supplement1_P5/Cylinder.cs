@@ -50,6 +50,11 @@ public class Cylinder : Shape3D{
         return 2 * Math.PI * radius * (radius + height); 
     }
 
+    /// <summary>
+    /// Returns a string representation of the cylinder, including
+    /// its surface area and volume.
+    /// </summary>
+    /// <returns>A string describing the surface area and volume of the cylinder.</returns>
     public override string dump()
     {
         return $"Cylinder: Surface Area = {GetSurfaceArea():0.##}, Volume = {GetVolume():0.##}";
