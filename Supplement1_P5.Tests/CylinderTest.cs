@@ -1,10 +1,11 @@
 namespace Supplement1_P5.Tests;
 
-public class CylindeTesy
+public class CylindeTest
 {
     [Fact]
-    public void Test1()
+    public void ConstructorValidRadiusAndHeight_DoesNotThrow()
     {
-
+        var exception = Record.Exception(() => new Cylinder(5, 10));
+        Assert.Null(exception);
     }
 }
