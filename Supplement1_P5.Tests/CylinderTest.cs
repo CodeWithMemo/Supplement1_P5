@@ -17,4 +17,11 @@ public class CylindeTest
             Assert.Throws<ArgumentException>(() => new Cylinder(-1, 10));
             Assert.Throws<ArgumentException>(() => new Cylinder(5, -1)); 
         }
+
+    [Fact]
+        public void GetVolumeCorrectCalculation()
+        {
+            var cylinder = new Cylinder(3, 7);
+            Assert.Equal(Math.PI * Math.Pow(3, 2) * 7, cylinder.GetVolume(), 2); 
+        }
 }
