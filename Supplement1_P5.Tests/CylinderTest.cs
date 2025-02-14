@@ -24,4 +24,11 @@ public class CylindeTest
             var cylinder = new Cylinder(3, 7);
             Assert.Equal(Math.PI * Math.Pow(3, 2) * 7, cylinder.GetVolume(), 2); 
         }
+
+    [Fact]
+        public void GetSurfaceArea_CorrectCalculation()
+        {
+            var cylinder = new Cylinder(4, 6);
+            Assert.Equal(2 * Math.PI * 4 * (4 + 6), cylinder.GetSurfaceArea(), 2); 
+        }
 }
