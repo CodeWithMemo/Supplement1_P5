@@ -41,6 +41,10 @@ public class Cylinder : Shape3D{
         return Math.PI * Math.Pow(radius, 2) * height; 
     }
 
+    /// <summary>
+    /// Calculates the surface area of the cylinder.
+    /// </summary>
+    /// <returns>The surface area of the cylinder</returns>
     public override double GetSurfaceArea()
     {
         return 2 * Math.PI * radius * (radius + height); 
