@@ -13,4 +13,15 @@ public class ShapeContainerTests
         Assert.Equal(1, container.shapes.Count);
         Assert.Equal("Sphere", container.Get(0).Name);
     }
+
+    [Fact]
+        public void CreateShouldThrowArgumentNullException_WhenShapeIsNull()
+        {
+            
+            var container = new ShapeContainer();
+
+            
+            var exception = Assert.Throws<ArgumentNullException>(() => container.Create(null));
+            Assert.Equal("shape", exception.ParamName); 
+        }
 }
