@@ -38,4 +38,15 @@ public class ShapeContainerTests
             Assert.Equal("Cube", retrievedShape.Name);
         }
 
+        [Fact]
+        public void GetShouldThrowArgumentOutOfRangeExceptionWhenIndexIsInvalid()
+        {
+            
+            var container = new ShapeContainer();
+
+            
+            var exception = Assert.Throws<ArgumentOutOfRangeException>(() => container.Get(0)); 
+            Assert.Equal("index", exception.ParamName); 
+        }
+
 }
