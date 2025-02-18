@@ -31,4 +31,13 @@ public class ShapeContainer
         }
         return shapes[index];
     }
+
+     public void Delete(int index)
+    {
+        if (index < 0 || index >= shapes.Count)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+        }
+        shapes.RemoveAt(index);
+    }
 }
