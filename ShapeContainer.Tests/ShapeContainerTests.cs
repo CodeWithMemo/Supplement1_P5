@@ -24,4 +24,18 @@ public class ShapeContainerTests
             var exception = Assert.Throws<ArgumentNullException>(() => container.Create(null));
             Assert.Equal("shape", exception.ParamName); 
         }
+
+        [Fact]
+        public void GetShouldReturnCorrectShapeWhenIndexIsValid()
+        {
+           
+            var container = new ShapeContainer();
+            var shape = new Shape3D("Cube");
+            container.Create(shape);
+
+            var retrievedShape = container.Get(0);
+
+            Assert.Equal("Cube", retrievedShape.Name);
+        }
+
 }
