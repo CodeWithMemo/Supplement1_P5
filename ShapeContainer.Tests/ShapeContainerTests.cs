@@ -64,4 +64,15 @@ public class ShapeContainerTests
             Assert.Equal("Cube", container.Get(0).Name);
         }
 
+        [Fact]
+        public void DeleteShouldThrowArgumentOutOfRangeExceptionWhenIndexIsInvalid()
+        {
+            var container = new ShapeContainer();
+            var shape = new Shape3D("Sphere");
+            container.Create(shape);
+
+            var exception = Assert.Throws<ArgumentOutOfRangeException>(() => container.Delete(1));
+            Assert.Equal("index", exception.ParamName); 
+        }
+
 }
