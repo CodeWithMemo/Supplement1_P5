@@ -49,4 +49,19 @@ public class ShapeContainerTests
             Assert.Equal("index", exception.ParamName); 
         }
 
+        [Fact]
+        public void Delete_ShouldRemoveShape_WhenIndexIsValid()
+        {
+            var container = new ShapeContainer();
+            var shape1 = new Shape3D("Sphere");
+            var shape2 = new Shape3D("Cube");
+            container.Create(shape1);
+            container.Create(shape2);
+
+            container.Delete(0);
+
+            Assert.Single(container.shapes);
+            Assert.Equal("Cube", container.Get(0).Name);
+        }
+
 }
