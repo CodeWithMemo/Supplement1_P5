@@ -75,4 +75,21 @@ public class ShapeContainerTests
             Assert.Equal("index", exception.ParamName); 
         }
 
-}
+          [Fact]
+        public void CreateShouldHandleMultipleShapes()
+        {
+            var container = new ShapeContainer();
+            var shape1 = new Shape3D("Sphere");
+            var shape2 = new Shape3D("Cube");
+            var shape3 = new Shape3D("Pyramid");
+
+            container.Create(shape1);
+            container.Create(shape2);
+            container.Create(shape3);
+
+            Assert.Equal(3, container.shapes.Count);
+            Assert.Equal("Sphere", container.Get(0).Name);
+            Assert.Equal("Cube", container.Get(1).Name);
+            Assert.Equal("Pyramid", container.Get(2).Name);
+        }
+    }
