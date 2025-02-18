@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Supplement1_P5.Tests", "Sup
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeContainer", "ShapeContainer\ShapeContainer.csproj", "{5659F9C9-9A02-4DFF-8031-FABA9A196839}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShapeContainer.Tests", "ShapeContainer.Tests\ShapeContainer.Tests.csproj", "{80BBF8BB-11A0-4B53-8046-F95073A2C908}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{5659F9C9-9A02-4DFF-8031-FABA9A196839}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5659F9C9-9A02-4DFF-8031-FABA9A196839}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5659F9C9-9A02-4DFF-8031-FABA9A196839}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BBF8BB-11A0-4B53-8046-F95073A2C908}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BBF8BB-11A0-4B53-8046-F95073A2C908}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BBF8BB-11A0-4B53-8046-F95073A2C908}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BBF8BB-11A0-4B53-8046-F95073A2C908}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
