@@ -12,5 +12,14 @@ public class Shape3D
 
 public class ShapeContainer
 {
+     private List<Shape3D> shapes = new List<Shape3D>();
 
+    public void Create(Shape3D shape)
+    {
+        if (shape == null)
+        {
+            throw new ArgumentNullException(nameof(shape), "Shape cannot be null.");
+        }
+        shapes.Add(shape);
+    }
 }
