@@ -22,4 +22,13 @@ public class ShapeContainer
         }
         shapes.Add(shape);
     }
+
+    public Shape3D Get(int index)
+    {
+        if (index < 0 || index >= shapes.Count)
+        {
+            throw new ArgumentOutOfRangeException(nameof(index), "Index is out of range.");
+        }
+        return shapes[index];
+    }
 }
