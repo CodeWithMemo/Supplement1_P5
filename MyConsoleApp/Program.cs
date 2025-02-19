@@ -12,4 +12,9 @@
         Height = height;
         Depth = depth;
     }
+
+    public void Dump()
+    {
+        Console.WriteLine($"Shape: {Name}, Width: {Width}, Height: {Height}, Depth: {Depth}");
+    }
 }
