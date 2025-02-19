@@ -34,4 +34,14 @@ class ShapeContainer
             return shapes[index];
         return null;
     }
+
+    public bool RemoveShape(int index)
+    {
+        if (index >= 0 && index < shapes.Count)
+        {
+            shapes.RemoveAt(index);
+            return true;
+        }
+        return false;
+    }
 }    
