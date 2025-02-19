@@ -4,4 +4,12 @@
     public double Width { get; }
     public double Height { get; }
     public double Depth { get; }
+
+    public Shape3D(string name, double width, double height, double depth)
+    {
+        Name = name;
+        Width = width;
+        Height = height;
+        Depth = depth;
+    }
 }
