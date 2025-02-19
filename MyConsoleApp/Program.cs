@@ -18,3 +18,13 @@
         Console.WriteLine($"Shape: {Name}, Width: {Width}, Height: {Height}, Depth: {Depth}");
     }
 }
+
+class ShapeContainer
+{
+    private List<Shape3D> shapes = new List<Shape3D>();
+
+    public void AddShape(Shape3D shape)
+    {
+        shapes.Add(shape);
+    }
+}    
