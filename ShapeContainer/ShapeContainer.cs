@@ -14,6 +14,11 @@ public class ShapeContainer
 {
      private List<Shape3D> shapes = new List<Shape3D>();
 
+/// <summary>
+/// Adds a 3D shape to the collection.
+/// </summary>
+/// <param name="shape">The 3D shape to be added.</param>
+/// <exception cref="ArgumentNullException">Thrown when the provided shape is null.</exception>
     public void Create(Shape3D shape)
     {
         if (shape == null)
