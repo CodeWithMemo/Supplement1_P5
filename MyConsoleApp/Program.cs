@@ -44,4 +44,60 @@ class ShapeContainer
         }
         return false;
     }
-}    
+}  
+
+class Program
+{
+    static void Main()
+    {
+        ShapeContainer container = new ShapeContainer();
+        string command;
+
+        Console.WriteLine("Shape Manager - Enter commands (create, get, delete, exit):");
+        while (true)
+        {
+            Console.Write("Command: ");
+            command = Console.ReadLine()?.Trim().ToLower();
+
+            if (command == "exit") break;
+            else if (command == "create")
+            {
+                Console.Write("Enter shape name: ");
+                string name = Console.ReadLine();
+                Console.Write("Enter width: ");
+                double width = double.Parse(Console.ReadLine());
+                Console.Write("Enter height: ");
+                double height = double.Parse(Console.ReadLine());
+                Console.Write("Enter depth: ");
+                double depth = double.Parse(Console.ReadLine());
+
+                Shape3D shape = new Shape3D(name, width, height, depth);
+                container.AddShape(shape);
+                shape.Dump();
+            }
+            else if (command == "get")
+            {
+                Console.Write("Enter index: ");
+                int index = int.Parse(Console.ReadLine());
+                Shape3D shape = container.GetShape(index);
+                if (shape != null)
+                    shape.Dump();
+                else
+                    Console.WriteLine("Invalid index.");
+            }
+            else if (command == "delete")
+            {
+                Console.Write("Enter index: ");
+                int index = int.Parse(Console.ReadLine());
+                if (container.RemoveShape(index))
+                    Console.WriteLine("Shape deleted successfully.");
+                else
+                    Console.WriteLine("Invalid index.");
+            }
+            else
+            {
+                Console.WriteLine("Unknown command. Available commands: create, get, delete, exit.");
+            }
+        }
+    }
+}
