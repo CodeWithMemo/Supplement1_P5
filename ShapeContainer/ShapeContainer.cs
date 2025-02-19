@@ -44,6 +44,12 @@ public class ShapeContainer
         return shapes[index];
     }
 
+/// <summary>
+/// Removes a 3D shape from the collection at the specified index.
+/// </summary>
+/// <param name="index">The zero-based index of the shape to remove.</param>
+/// <exception cref="ArgumentOutOfRangeException">Thrown when the index is less 
+// than 0 or greater than or equal to the number of shapes in the collection.</exception>
      public void Delete(int index)
     {
         if (index < 0 || index >= shapes.Count)
