@@ -27,4 +27,11 @@ class ShapeContainer
     {
         shapes.Add(shape);
     }
+
+    public Shape3D GetShape(int index)
+    {
+        if (index >= 0 && index < shapes.Count)
+            return shapes[index];
+        return null;
+    }
 }    
