@@ -26,8 +26,15 @@ public class ShapeContainer
             throw new ArgumentNullException(nameof(shape), "Shape cannot be null.");
         }
         shapes.Add(shape);
-    }
+    }    
 
+/// <summary>
+/// Retrieves a 3D shape from the collection at the specified index.
+/// </summary>
+/// <param name="index">The zero-based index of the shape to retrieve.</param>
+/// <returns>The Shape3D at the specified index.</returns>
+/// <exception cref="ArgumentOutOfRangeException">Thrown when the index is less than 0 or
+///  greater than or equal to the number of shapes in the collection.</exception>
     public Shape3D Get(int index)
     {
         if (index < 0 || index >= shapes.Count)
