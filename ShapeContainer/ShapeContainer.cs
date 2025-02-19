@@ -14,6 +14,8 @@ public class ShapeContainer
 {
      private List<Shape3D> shapes = new List<Shape3D>();
 
+     public List<Shape3D> Shapes => shapes;
+
 /// <summary>
 /// Adds a 3D shape to the collection.
 /// </summary>

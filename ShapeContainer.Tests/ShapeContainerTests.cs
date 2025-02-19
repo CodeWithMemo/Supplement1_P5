@@ -10,7 +10,7 @@ public class ShapeContainerTests
 
         container.Create(shape);
 
-        Assert.Equal(1, container.shapes.Count);
+        Assert.Single(container.Shapes);
         Assert.Equal("Sphere", container.Get(0).Name);
     }
 
@@ -60,7 +60,7 @@ public class ShapeContainerTests
 
             container.Delete(0);
 
-            Assert.Single(container.shapes);
+            Assert.Single(container.Shapes);
             Assert.Equal("Cube", container.Get(0).Name);
         }
 
@@ -87,7 +87,7 @@ public class ShapeContainerTests
             container.Create(shape2);
             container.Create(shape3);
 
-            Assert.Equal(3, container.shapes.Count);
+            Assert.Equal(3, container.Shapes.Count);
             Assert.Equal("Sphere", container.Get(0).Name);
             Assert.Equal("Cube", container.Get(1).Name);
             Assert.Equal("Pyramid", container.Get(2).Name);
